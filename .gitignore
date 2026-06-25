@@ -1,5 +1,3 @@
-# Local API credentials - never commit
-config.js
 
 # OS / editor noise
 .DS_Store
