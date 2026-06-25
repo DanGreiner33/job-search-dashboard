@@ -1,0 +1,30 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color: #1f2328; background: #f6f8fa; }
+.topbar { display: flex; align-items: center; gap: 12px; padding: 12px 20px; background: #24292f; color: #fff; }
+.topbar h1 { font-size: 18px; margin: 0; }
+.status { font-size: 13px; opacity: 0.85; }
+.layout { display: grid; grid-template-columns: 300px 1fr; gap: 20px; padding: 20px; align-items: start; }
+.sidebar { background: #fff; border: 1px solid #d0d7de; border-radius: 8px; padding: 16px; display: flex; flex-direction: column; gap: 10px; position: sticky; top: 20px; }
+.sidebar h2 { margin: 0 0 4px; font-size: 15px; }
+.sidebar label { display: flex; flex-direction: column; font-size: 13px; gap: 4px; color: #424a53; }
+.sidebar label.check { flex-direction: row; align-items: center; gap: 8px; }
+.sidebar input, .sidebar select { padding: 6px 8px; border: 1px solid #d0d7de; border-radius: 6px; font-size: 14px; }
+button { padding: 8px 12px; border: none; border-radius: 6px; background: #1f883d; color: #fff; font-size: 14px; cursor: pointer; }
+button.secondary { background: #eaeef2; color: #24292f; border: 1px solid #d0d7de; }
+button:hover { filter: brightness(0.96); }
+.results { display: flex; flex-direction: column; gap: 12px; }
+.results-head { display: flex; justify-content: space-between; align-items: center; }
+.debug { background: #0d1117; color: #c9d1d9; padding: 12px; border-radius: 8px; overflow: auto; font-size: 12px; white-space: pre-wrap; word-break: break-all; }
+.hidden { display: none; }
+.cards { display: flex; flex-direction: column; gap: 12px; }
+.card { background: #fff; border: 1px solid #d0d7de; border-radius: 8px; padding: 14px 16px; }
+.card h3 { margin: 0 0 6px; font-size: 16px; }
+.card h3 a { color: #0969da; text-decoration: none; }
+.card .meta { font-size: 13px; color: #57606a; margin-bottom: 8px; display: flex; flex-wrap: wrap; gap: 10px; }
+.card .desc { font-size: 14px; color: #24292f; line-height: 1.4; }
+.card .tags { margin-top: 8px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 12px; background: #ddf4ff; color: #0969da; padding: 2px 8px; border-radius: 999px; }
+.tag.warn { background: #fff1e5; color: #bc4c00; }
+.pager { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 8px 0; }
+.empty { padding: 30px; text-align: center; color: #57606a; }
+@media (max-width: 800px) { .layout { grid-template-columns: 1fr; } .sidebar { position: static; } }
