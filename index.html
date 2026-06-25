@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Job Search Dashboard</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+<h1>Job Search Dashboard</h1>
+<span id="status" class="status"></span>
+</header>
+<main class="layout">
+<aside class="sidebar">
+<h2>Filters</h2>
+<label>Keywords<input type="text" id="what" placeholder="e.g. barista, cashier" /></label>
+<label>Exclude words<input type="text" id="whatExclude" placeholder="e.g. senior, manager" /></label>
+<label>Location<input type="text" id="where" placeholder="e.g. St Louis, MO" /></label>
+<label>Distance (km)<input type="number" id="distance" min="0" value="25" /></label>
+<label>Country
+<select id="country">
+<option value="us" selected>United States</option>
+<option value="gb">United Kingdom</option>
+<option value="ca">Canada</option>
+<option value="au">Australia</option>
+</select>
+</label>
+<label>Age cohort preset
+<select id="cohort">
+<option value="general" selected>General</option>
+<option value="teen">Teen (15-18)</option>
+<option value="early">Early career</option>
+</select>
+</label>
+<label>Min salary<input type="number" id="salaryMin" min="0" step="1000" /></label>
+<label>Max salary<input type="number" id="salaryMax" min="0" step="1000" /></label>
+<label>Contract type
+<select id="contractType">
+<option value="">Any</option>
+<option value="permanent">Permanent</option>
+<option value="contract">Contract</option>
+</select>
+</label>
+<label>Contract time
+<select id="contractTime">
+<option value="">Any</option>
+<option value="full_time">Full time</option>
+<option value="part_time">Part time</option>
+</select>
+</label>
+<label>Sort by
+<select id="sortBy">
+<option value="relevance">Relevance</option>
+<option value="date">Date</option>
+<option value="salary">Salary</option>
+</select>
+</label>
+<label>Max days old<input type="number" id="maxDaysOld" min="0" placeholder="any" /></label>
+<label class="check"><input type="checkbox" id="hideIrrelevant" checked /> Hide irrelevant / youth-bait listings</label>
+<label class="check"><input type="checkbox" id="fullTimeOnly" /> Suppress unpaid / commission-only</label>
+<button id="searchBtn">Search</button>
+<button id="resetBtn" class="secondary">Reset</button>
+</aside>
+<section class="results">
+<div class="results-head">
+<span id="count"></span>
+<button id="debugBtn" class="secondary">Toggle query inspector</button>
+</div>
+<pre id="debug" class="debug hidden"></pre>
+<div id="cards" class="cards"></div>
+<div class="pager">
+<button id="prevBtn" class="secondary">Prev</button>
+<span id="pageLabel">Page 1</span>
+<button id="nextBtn" class="secondary">Next</button>
+</div>
+</section>
+</main>
+<script src="config.js"></script>
+<script src="filters.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
