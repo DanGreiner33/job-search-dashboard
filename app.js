@@ -29,7 +29,8 @@ contractTime: $("contractTime").value,
 sortBy: $("sortBy").value,
 maxDaysOld: parseInt($("maxDaysOld").value, 10) || 0,
 hideIrrelevant: $("hideIrrelevant").checked,
-fullTimeOnly: $("fullTimeOnly").checked
+fullTimeOnly: $("fullTimeOnly").checked,
+suppressRecruiters: $("suppressRecruiters").checked
 };
 }
 
@@ -113,6 +114,7 @@ $("contractTime").value = "";
 $("sortBy").value = "relevance";
 $("hideIrrelevant").checked = true;
 $("fullTimeOnly").checked = false;
+$("suppressRecruiters").checked = false;
 state.page = 1;
 }
 
